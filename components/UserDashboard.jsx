@@ -13,10 +13,6 @@ const UserDashboard = () => {
 
     const { todos, setTodos, loading, error } = useFetchTodos()
 
-
-
-    console.log(todos)
-
     // useEffect(() => {
     //     if (!userInfo || Object.keys(userInfo).length === 0) {
     //         setAddTodo(true)
@@ -52,8 +48,6 @@ const UserDashboard = () => {
 
     function handleAddEdit(todoKey) {
         return () => {
-            console.log(todos[todoKey])
-            console.log('bannan')
             setEdit(todoKey)
             setEdittedValue(todos[todoKey])
         }
