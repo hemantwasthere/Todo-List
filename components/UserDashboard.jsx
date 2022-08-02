@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import TodoCard from './TodoCard'
 import { doc, setDoc, deleteField } from 'firebase/firestore'
@@ -6,7 +6,7 @@ import { db } from '../firebase'
 import useFetchTodos from '../hooks/fetchTodos'
 
 const UserDashboard = () => {
-    const { userInfo, currentUser } = useAuth()
+    const { currentUser } = useAuth()
     const [edit, setEdit] = useState(null)
     const [todo, setTodo] = useState('')
     const [edittedValue, setEdittedValue] = useState('')
